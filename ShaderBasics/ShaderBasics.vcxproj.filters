@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Particles">
+      <UniqueIdentifier>{58f31a11-4b91-4854-968e-a51c14cb24a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Particles">
+      <UniqueIdentifier>{38457cb8-ae8f-4c44-9516-2b253b4079bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SphereShaderExample">
+      <UniqueIdentifier>{36de9b71-df38-4fcd-8de4-cdede918ae7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SphereShaderExample">
+      <UniqueIdentifier>{2e16015f-5006-4ee7-ad03-eeadd36a993d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AShader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle.h">
+      <Filter>Header Files\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="AGPUProgram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleEffect.h">
+      <Filter>Header Files\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="FragmentShader.h">
+      <Filter>Header Files\SphereShaderExample</Filter>
+    </ClInclude>
+    <ClInclude Include="SphereGPUProgram.h">
+      <Filter>Header Files\SphereShaderExample</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexGenerator.h">
+      <Filter>Header Files\SphereShaderExample</Filter>
+    </ClInclude>
+    <ClInclude Include="SphereScene.h">
+      <Filter>Header Files\SphereShaderExample</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexShader.h">
+      <Filter>Header Files\SphereShaderExample</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleFragShader.h">
+      <Filter>Header Files\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleScene.h">
+      <Filter>Header Files\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="EnvelopedSpringVertShader.h">
+      <Filter>Header Files\Particles</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderBasics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AShader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Particle.cpp">
+      <Filter>Source Files\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="AGPUProgram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SphereGPUProgram.cpp">
+      <Filter>Source Files\SphereShaderExample</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexGenerator.cpp">
+      <Filter>Source Files\SphereShaderExample</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexShader.cpp">
+      <Filter>Source Files\SphereShaderExample</Filter>
+    </ClCompile>
+    <ClCompile Include="FragmentShader.cpp">
+      <Filter>Source Files\SphereShaderExample</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleFragShader.cpp">
+      <Filter>Source Files\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="EnvelopedSpringVertShader.cpp">
+      <Filter>Source Files\Particles</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ShaderBasics.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
