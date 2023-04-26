@@ -72,7 +72,6 @@ inline void SphereScene<GProgram, VGenerator>::initializeScene()
 
 float test = 0.0f;
 float dir = 1.0f;
-float modelAngle2 = 45.0f;
 
 template<class GProgram, class VGenerator>
 inline void SphereScene<GProgram, VGenerator>::update()
@@ -85,17 +84,17 @@ inline void SphereScene<GProgram, VGenerator>::update()
 	this->program.addMatrix4x4f(modelRot, "modelRot");
 
 	glm::mat4 modelRot2 = glm::mat4(1.0f);
-	//modelRot2 = glm::rotate(modelRot, glm::radians(modelAngle2), glm::vec3(0.0, 0.0, -1.0));
+	modelRot2 = glm::rotate(modelRot2, glm::radians(modelAngle), glm::vec3(-1.0, 0.0, 0.0));
 	this->program.addMatrix4x4f(modelRot2, "modelRot2");
 
 	this->program.addFloat(1.0f, "wT");
 
 	glm::mat4 trans = glm::mat4(1.0f);
-	trans = glm::translate(trans, glm::vec3( -1.5, glm::sin(test), 0.0));
+	trans = glm::translate(trans, glm::vec3( -1.5, 0.0, 0.0));
 	this->program.addMatrix4x4f(trans, "trans");
 	
 	glm::mat4 trans2 = glm::mat4(1.0f);
-	//trans2 = glm::translate(trans, glm::vec3( -1.5, glm::sin(test), 0.0));
+	trans2 = glm::translate(trans2, glm::vec3( 0.0, glm::sin(test), 0.0));
 	this->program.addMatrix4x4f(trans2, "trans2");
 
 	
@@ -106,19 +105,18 @@ inline void SphereScene<GProgram, VGenerator>::update()
 
 	
 	modelAngle -= 90.0f*this->dT;
-	modelAngle2 -= 0.000001f;
 	
 	//xRadius -= rdx * 0.25f*this->dT;
-	if (xRadius<0.5f || xRadius>1.0f)
-		rdx = -1 * rdx;
+	//if (xRadius<0.5f || xRadius>1.0f)
+	//	rdx = -1 * rdx;
 	//yRadius -= rdy * 0.2f*this->dT;
-	if (yRadius<0.5f || yRadius>1.0f)
-		rdy = -1 * rdy;
+	//if (yRadius<0.5f || yRadius>1.0f)
+	//	rdy = -1 * rdy;
 	//zRadius -= rdz * 0.15f*this->dT;
-	if (zRadius<0.2f || zRadius>1.0f)
-		rdz = -1 * rdz;
+	//if (zRadius<0.2f || zRadius>1.0f)
+	//	rdz = -1 * rdz;
 
-	test += dir * 0.005f;
-	if (test > 180.0f || test < -180.0f)
+	test += dir * 0.001f;
+	if (test > 90.0f || test < -90.0f)
 		dir *= -1;
 }

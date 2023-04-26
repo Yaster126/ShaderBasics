@@ -35,7 +35,7 @@ std::string VertexShader::Source()
 		"	float x=0.5*xRadius*sin(aPos.x)*sin(2*aPos.z);\n"			//MUSZLA
 		"	float z=zRadius*cos(2*aPos.x)*sin(aPos.z)*sin(aPos.z);\n"
 		"	float y=yRadius*sin(2*aPos.x)*sin(aPos.z)*sin(aPos.z);\n"
-		"   gl_Position = (proj*view*modelRot*trans*modelRot2)*vec4(x, y, z, 1.0);\n"
+		"   gl_Position = (proj*view*trans2*modelRot*trans*modelRot2)*vec4(x, y, z, 1.0);\n"
 		"	xPos=gl_Position.x;\n"
 		"	yPos=gl_Position.y;\n"
 		"	zPos=gl_Position.z;\n"
