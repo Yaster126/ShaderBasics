@@ -112,11 +112,11 @@ inline void SphereScene<GProgram, VGenerator>::update()
 	//yRadius -= rdy * 0.2f*this->dT;
 	//if (yRadius<0.5f || yRadius>1.0f)
 	//	rdy = -1 * rdy;
-	//zRadius -= rdz * 0.10f*this->dT;
-	if (zRadius<0.5f || zRadius>1.0f)
+	zRadius -= rdz * 0.05f*this->dT;
+	if (zRadius<0.6f || zRadius>1.0f)
 		rdz = -1 * rdz;
 
-	test += dir * 0.003f;					//prêdkoœæ toczenia
+	test += dir * 0.003f;																			//k¹t do liczenia sinusa
 	if (test < -90.0f || test > 90.0f)
 		dir *= -1;
 }
