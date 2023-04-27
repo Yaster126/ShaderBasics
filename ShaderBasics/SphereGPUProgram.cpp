@@ -18,7 +18,9 @@ bool SphereGPUProgram::bindVertieces(VertexGenerator& vGen, float dT, float wT)
 	// bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
 	glBindVertexArray(VAO);
 	
-	float p[7] = { -pi / 2, pi / 2, pi / 20, -pi, pi, pi / 20, 1 };
+	//float p[7] = { -pi / 2, pi / 2, pi / 20, -pi, pi, pi / 20, 1 };	//SFERA
+	//float p[7] = { 0, 2*pi, pi / 20, -pi/2, pi/2, pi / 20, 1 };		//KLEPSYDRA
+	float p[7] = { 0, pi, pi / 20, -pi/2, pi/2, pi / 20, 1 };			//MUSZLA
 	float* vertices = vGen.generateVertieces(p);
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	glBufferData(GL_ARRAY_BUFFER, vGen.Size()*vGen.Count()*vGen.Dim() * sizeof(float), vertices, GL_STATIC_DRAW);

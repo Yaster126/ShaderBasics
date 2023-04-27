@@ -10,9 +10,9 @@ std::string VertexShader::Source()
 		"layout (location = 1) in vec4 aCol;\n"
 		"layout (location = 2) in float aKind;\n"
 		"uniform mat4 modelRot;\n"
-		"uniform mat4 modelRot2;\n"
+		"uniform mat4 modelRot2;\n"		//dodano
 		"uniform mat4 trans;\n"
-		"uniform mat4 trans2;\n"
+		"uniform mat4 trans2;\n"		//dodano
 		"uniform mat4 proj;\n"
 		"uniform mat4 view;\n"
 		"uniform float wT;\n"
@@ -35,7 +35,7 @@ std::string VertexShader::Source()
 		"	float x=0.5*xRadius*sin(aPos.x)*sin(2*aPos.z);\n"			//MUSZLA
 		"	float z=zRadius*cos(2*aPos.x)*sin(aPos.z)*sin(aPos.z);\n"
 		"	float y=yRadius*sin(2*aPos.x)*sin(aPos.z)*sin(aPos.z);\n"
-		"   gl_Position = (proj*view*trans2*modelRot*trans*modelRot2)*vec4(x, y, z, 1.0);\n"
+		"   gl_Position = (proj*view*trans2*modelRot*trans*modelRot2)*vec4(x, y, z, 1.0);\n"	//dodano rotacjê modelRot2 oraz translacjê trans2
 		"	xPos=gl_Position.x;\n"
 		"	yPos=gl_Position.y;\n"
 		"	zPos=gl_Position.z;\n"

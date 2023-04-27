@@ -84,7 +84,7 @@ inline void SphereScene<GProgram, VGenerator>::update()
 	this->program.addMatrix4x4f(modelRot, "modelRot");
 
 	glm::mat4 modelRot2 = glm::mat4(1.0f);
-	modelRot2 = glm::rotate(modelRot2, glm::radians(modelAngle), glm::vec3(-1.0, 0.0, 0.0));
+	modelRot2 = glm::rotate(modelRot2, glm::radians(modelAngle), glm::vec3(-1.0, 0.0, 0.0));		//obrót symuluj¹cy toczenie
 	this->program.addMatrix4x4f(modelRot2, "modelRot2");
 
 	this->program.addFloat(1.0f, "wT");
@@ -94,7 +94,7 @@ inline void SphereScene<GProgram, VGenerator>::update()
 	this->program.addMatrix4x4f(trans, "trans");
 	
 	glm::mat4 trans2 = glm::mat4(1.0f);
-	trans2 = glm::translate(trans2, glm::vec3( 0.0, glm::sin(test), 0.0));
+	trans2 = glm::translate(trans2, glm::vec3( 0.0, glm::sin(test), 0.0));							//przesuniêcie po sinusoidzie
 	this->program.addMatrix4x4f(trans2, "trans2");
 
 	
@@ -112,11 +112,11 @@ inline void SphereScene<GProgram, VGenerator>::update()
 	//yRadius -= rdy * 0.2f*this->dT;
 	//if (yRadius<0.5f || yRadius>1.0f)
 	//	rdy = -1 * rdy;
-	//zRadius -= rdz * 0.15f*this->dT;
-	//if (zRadius<0.2f || zRadius>1.0f)
-	//	rdz = -1 * rdz;
+	zRadius -= rdz * 0.10f*this->dT;
+	if (zRadius<0.5f || zRadius>1.0f)
+		rdz = -1 * rdz;
 
-	test += dir * 0.001f;
-	if (test > 90.0f || test < -90.0f)
+	test += dir * 0.003f;					//prêdkoœæ toczenia
+	if (test < -90.0f || test > 90.0f)
 		dir *= -1;
 }

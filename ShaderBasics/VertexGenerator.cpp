@@ -46,7 +46,7 @@ float * VertexGenerator::generateVertieces(float* params)
 			generateOneVertex(vertices, i, x + xStep, 0, z, 0, 0, 1, type);
 			generateOneVertex(vertices, i, x + xStep, 0, z + zStep, 0, 0, 1, type);
 			//generateOneVertex(vertices, i, x, 0, z + zStep, 0, 0, 1, type);
-			//type = !type;
+			//type = !type;																	//w celu poprawnego generowania kolorowych kwadratów zmniejszono czêstotliwoœæ zmian koloru
 			generateOneVertex(vertices, i, x, 0, z, 0, 0, 1, type);
 			generateOneVertex(vertices, i, x + xStep, 0, z + zStep, 0, 0, 1, type);
 			generateOneVertex(vertices, i, x, 0, z + zStep, 0, 0, 1, type);
