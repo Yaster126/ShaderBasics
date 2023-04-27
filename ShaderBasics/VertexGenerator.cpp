@@ -34,7 +34,7 @@ float * VertexGenerator::generateVertieces(float* params)
 	size = (int)((xEnd - xStart) / xStep) * (int)((zEnd - zStart) / zStep);
 	quadSize = size;
 	size += (int)((xEnd - xStart) / (lineDensity*xStep)) * (int)((zEnd - zStart) / (lineDensity*zStep));
-	count = 6;
+	count = 4;																				//cztery wierzcho³ki
 	dim = 8;
 	float *vertices = new float[size*count*dim];
 	int i = 0;
@@ -44,13 +44,13 @@ float * VertexGenerator::generateVertieces(float* params)
 
 			generateOneVertex(vertices, i, x, 0, z, 0, 0, 1, type);
 			generateOneVertex(vertices, i, x + xStep, 0, z, 0, 0, 1, type);
-			generateOneVertex(vertices, i, x + xStep, 0, z + zStep, 0, 0, 1, type);
-			//generateOneVertex(vertices, i, x, 0, z + zStep, 0, 0, 1, type);
-			//type = !type;																	//w celu poprawnego generowania kolorowych kwadratów zmniejszono czêstotliwoœæ zmian koloru
-			generateOneVertex(vertices, i, x, 0, z, 0, 0, 1, type);
-			generateOneVertex(vertices, i, x + xStep, 0, z + zStep, 0, 0, 1, type);
+			generateOneVertex(vertices, i, x + xStep, 0, z + zStep, 0, 0, 1, type);			//cztery wierzcho³ki na potrzebê generowania kwadratów
 			generateOneVertex(vertices, i, x, 0, z + zStep, 0, 0, 1, type);
 			type = !type;
+			//generateOneVertex(vertices, i, x, 0, z, 0, 0, 1, type);
+			//generateOneVertex(vertices, i, x + xStep, 0, z + zStep, 0, 0, 1, type);
+			//generateOneVertex(vertices, i, x, 0, z + zStep, 0, 0, 1, type);
+			//type = !type;
 
 		}
 	}

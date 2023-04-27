@@ -42,7 +42,7 @@ void SphereScene<GProgram, VGenerator>::drawVertieces()
 	glClear(GL_COLOR_BUFFER_BIT);
 	int size = this->vGenerator.QuadSize()*this->vGenerator.Count();
 
-	glDrawArrays(GL_TRIANGLES /*GL_QUADS*/, 0, this->vGenerator.QuadSize()*this->vGenerator.Count());
+	glDrawArrays(/*GL_TRIANGLES*/ GL_QUADS, 0, this->vGenerator.QuadSize()*this->vGenerator.Count());		//rysowanie kwadratów
 	glDrawArrays(GL_LINES, this->vGenerator.QuadSize()*this->vGenerator.Count(), (this->vGenerator.Size() - this->vGenerator.QuadSize())*this->vGenerator.Count());
 }
 
@@ -112,7 +112,7 @@ inline void SphereScene<GProgram, VGenerator>::update()
 	//yRadius -= rdy * 0.2f*this->dT;
 	//if (yRadius<0.5f || yRadius>1.0f)
 	//	rdy = -1 * rdy;
-	zRadius -= rdz * 0.10f*this->dT;
+	//zRadius -= rdz * 0.10f*this->dT;
 	if (zRadius<0.5f || zRadius>1.0f)
 		rdz = -1 * rdz;
 
